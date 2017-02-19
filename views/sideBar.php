@@ -1,0 +1,25 @@
+<div class="left">
+    <form id="form">
+        <label for="minTripStartDate">Date start's before:</label><br>
+        <input name="minTripStartDate" type="text" class="datepicker" value="<?php echo $filters['minTripStartDate']; ?>"><br>
+        <label for="maxTripStartDate">Date start's after:</label><br>
+        <input name="maxTripStartDate" type="text" class="datepicker" value="<?php echo $filters['maxTripStartDate']; ?>"><br>
+        <label for="lengthOfStay">Length of stay:</label><br>
+        <input id="lengthOfStay" name="lengthOfStay" type="number" min="1" value="<?php echo $filters['lengthOfStay']; ?>"><br>
+        <label for="destinationCity">Destination city:</label><br>
+        <input name="destinationCity" type="text" value="<?php echo $filters['destinationCity']; ?>"><br>
+        <label>Min rate:</label><br>
+        <input type="radio" name="minStarRating" value="1" <?php echo ($filters['minStarRating'] == 1) ? "checked" : ""; ?>>
+        <label for="minStarRating"><span>★</span></label><br>
+        <input type="radio" name="minStarRating" value="2" <?php echo ($filters['minStarRating'] == 2) ? "checked" : ""; ?>>
+        <label for="minStarRating"><span>★</span><span>★</span></label><br>
+        <input type="radio" name="minStarRating" value="3" <?php echo ($filters['minStarRating'] == 3) ? "checked" : ""; ?>>
+        <label for="minStarRating"><span>★</span><span>★</span><span>★</span></label><br>
+        <input type="radio" name="minStarRating" value="4" <?php echo ($filters['minStarRating'] == 4) ? "checked" : ""; ?>>
+        <label for="minStarRating"><span>★</span><span>★</span><span>★</span><span>★</span></label><br>
+        <input type="radio" name="minStarRating" value="5" <?php echo ($filters['minStarRating'] == 5) ? "checked" : ""; ?>>
+        <label for="minStarRating"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></label><br>
+        <input type="button" id="reset" value="Reset">
+        <input type="submit" value="Filter">
+    </form>
+</div>

@@ -37,32 +37,40 @@ class apiHelper
     public static function getFilters(){
         $filters = array();
 
-        if(isset($_GET['destinationName'])) {
-            $filters['destinationName'] = $_GET['destinationName'];
+        if(isset($_GET['destinationCity'])) {
+            $filters['destinationCity'] = $_GET['destinationCity'];
+        } else {
+            $filters['destinationCity'] = '';
         }
 
         if(isset($_GET['lengthOfStay'])) {
             $filters['lengthOfStay'] = $_GET['lengthOfStay'];
+        } else {
+            $filters['lengthOfStay'] = '';
         }
 
         if(isset($_GET['minTripStartDate'])) {
             $filters['minTripStartDate'] = $_GET['minTripStartDate'];
+        } else {
+            $filters['minTripStartDate'] = '';
         }
 
         if(isset($_GET['maxTripStartDate'])) {
             $filters['maxTripStartDate'] = $_GET['maxTripStartDate'];
+        } else {
+            $filters['maxTripStartDate'] = '';
         }
 
         if(isset($_GET['minStarRating'])) {
             $filters['minStarRating'] = $_GET['minStarRating'];
+        } else {
+            $filters['minStarRating'] = '';
         }
 
         if(isset($_GET['maxStarRating'])) {
             $filters['maxStarRating'] = $_GET['maxStarRating'];
-        }
-
-        if(isset($_GET['maxStarRating'])) {
-            $filters['maxStarRating'] = $_GET['maxStarRating'];
+        } else {
+            $filters['maxStarRating'] = '';
         }
 
         return $filters;
