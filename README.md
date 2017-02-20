@@ -15,15 +15,14 @@ The following demo is running on Heroku
 
 ### Installation
 1. Clone the [repository](https://github.com/ekermawi/expedia_exercise)
-1. Install [Docker](https://www.docker.com/products/overview)
-2. Install [docker-compose](https://docs.docker.com/compose/install/)
-3. 
+2. Install [Docker](https://www.docker.com/products/overview)
+3. Install [docker-compose](https://docs.docker.com/compose/install/)
+4. 
 ```bash
 $ cd expedia
 $ bin/run install
 ```
-
-4. Browse your [localhost:3000](http://localhost:3000)
+5. Browse your [localhost:3000](http://localhost:3000)
 
 
 ### Running The Tests
