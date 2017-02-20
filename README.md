@@ -22,7 +22,7 @@ The following demo is running on Heroku
 $ cd expedia
 $ bin/run install
 ```
-5. Browse your [localhost:3000](http://localhost:3000)
+- Browse your [localhost:3000](http://localhost:3000)
 
 
 ### Running The Tests
