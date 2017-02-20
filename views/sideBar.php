@@ -8,6 +8,7 @@
         <input id="lengthOfStay" name="lengthOfStay" type="number" min="1" value="<?php echo $filters['lengthOfStay']; ?>"><br>
         <label for="destinationCity">Destination city:</label><br>
         <input name="destinationCity" type="text" value="<?php echo $filters['destinationCity']; ?>"><br>
+
         <label>Min rate:</label><br>
         <input type="radio" name="minStarRating" value="1" <?php echo ($filters['minStarRating'] == 1) ? "checked" : ""; ?>>
         <label for="minStarRating"><span>★</span></label><br>
@@ -19,7 +20,19 @@
         <label for="minStarRating"><span>★</span><span>★</span><span>★</span><span>★</span></label><br>
         <input type="radio" name="minStarRating" value="5" <?php echo ($filters['minStarRating'] == 5) ? "checked" : ""; ?>>
         <label for="minStarRating"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></label><br>
-        <input type="button" id="reset" value="Reset">
+
+        <label>Max rate:</label><br>
+        <input type="radio" name="maxStarRating" value="1" <?php echo ($filters['maxStarRating'] == 1) ? "checked" : ""; ?>>
+        <label for="maxStarRating"><span>★</span></label><br>
+        <input type="radio" name="maxStarRating" value="2" <?php echo ($filters['maxStarRating'] == 2) ? "checked" : ""; ?>>
+        <label for="maxStarRating"><span>★</span><span>★</span></label><br>
+        <input type="radio" name="maxStarRating" value="3" <?php echo ($filters['maxStarRating'] == 3) ? "checked" : ""; ?>>
+        <label for="maxStarRating"><span>★</span><span>★</span><span>★</span></label><br>
+        <input type="radio" name="maxStarRating" value="4" <?php echo ($filters['maxStarRating'] == 4) ? "checked" : ""; ?>>
+        <label for="maxStarRating"><span>★</span><span>★</span><span>★</span><span>★</span></label><br>
+        <input type="radio" name="maxStarRating" value="5" <?php echo ($filters['maxStarRating'] == 5) ? "checked" : ""; ?>>
+        <label for="maxStarRating"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></label><br>
         <input type="submit" value="Filter">
+        <input type="button" id="reset" value="Reset">
     </form>
 </div>

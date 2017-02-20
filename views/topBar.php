@@ -6,5 +6,5 @@
 <!-- */-->
 
 <div class="top">
-    TOP
+    <img src="images/logo.png">
 </div>
