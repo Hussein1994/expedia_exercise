@@ -21,7 +21,7 @@
                                 </p>
                                 <div class="row">
                                     <div class="col-xs-12 col-md-6">
-                                        <span>Address: <?php echo $offer->hotelInfo->hotelCountryCode . ', ' . $offer->hotelInfo->hotelCity . ', ' . $offer->hotelInfo->hotelStreetAddress ?></span>
+                                        <span>Address: <?php echo $offer->hotelInfo->hotelCountryCode . ', ' . $offer->hotelInfo->hotelCity . ', ' . $offer->hotelInfo->hotelStreetAddress ?></span><br>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -29,7 +29,8 @@
                                         <?php switch ($offer->hotelUrgencyInfo->almostSoldStatus) {
                                             case 'AVAILABLE' : ?>
                                                 <?php if($offer->hotelPricingInfo->percentSavings != 0.0) { ?>
-                                                    Price per night: $<?php echo $offer->hotelPricingInfo->originalPricePerNight; ?>, book now and save <?php echo $offer->hotelPricingInfo->percentSavings; ?>%
+                                                    Price per night: $<?php echo $offer->hotelPricingInfo->originalPricePerNight; ?><br>
+                                                    Book now and save <?php echo $offer->hotelPricingInfo->percentSavings; ?>%
                                                 <?php } else { ?>
                                                     Price per night: $<?php echo $offer->hotelPricingInfo->originalPricePerNight; ?>
                                                 <?php } ?>
@@ -37,7 +38,8 @@
                                             case 'ALMOST_SOLD' : ?>
                                                 <span style="color:red">Almost sold!</span><br>
                                                 <?php if($offer->hotelPricingInfo->percentSavings != 0.0) { ?>
-                                                    Price per night: $<?php echo $offer->hotelPricingInfo->originalPricePerNight; ?>, book now and save <?php echo $offer->hotelPricingInfo->percentSavings; ?>%
+                                                    Price per night: $<?php echo $offer->hotelPricingInfo->originalPricePerNight; ?><br>
+                                                    Book now and save <?php echo $offer->hotelPricingInfo->percentSavings; ?>%
                                                 <?php } else { ?>
                                                     Price per night: $<?php echo $offer->hotelPricingInfo->originalPricePerNight; ?>
                                                 <?php } ?>
@@ -47,6 +49,12 @@
                                                 <?php break;
                                         } ?>
                                     </div>
+                                    <?php if($offer->hotelUrgencyInfo->almostSoldStatus != 'NO_DATA') { ?>
+                                    <div class="col-xs-12 col-md-6">
+                                       Check in: <?php echo $offer->hotelInfo->travelStartDate;?><br>
+                                       Check out: <?php echo $offer->hotelInfo->travelEndDate;?>
+                                    </div>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
