@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Preserve current directory absolute path (right from google.com)
+pushd `dirname $0` > /dev/null
+CURR_PATH=`pwd -P`
+popd > /dev/null
+APP_PATH=$CURR_PATH/..
+
+cd $APP_PATH
+if [ "$1" = "test" ]; then
+    docker exec -it expedia.apache bin/phpspec run --format=pretty
+    exit 0;
+fi
+
+if [ "$1" = "install" ]; then
+   docker-compose up -d
+   docker exec -it expedia.apache curl https://getcomposer.org/composer.phar -o /usr/bin/composer
+   docker exec -it expedia.apache chmod +x /usr/bin/composer
+   docker exec -it expedia.apache composer install
+   exit 0;
+fi
+
+docker-compose up -d
+
+

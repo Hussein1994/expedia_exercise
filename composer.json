@@ -1,0 +1,19 @@
+{
+    "name": "laith/expedia",
+    "description": "Expedia coding excersie",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Laith Ekermawi",
+            "email": "laith.ekrmawi@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpspec/phpspec": "^3.0"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {"psr-0": {"": "classes"}}
+}

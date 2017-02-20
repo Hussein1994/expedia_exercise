@@ -6,19 +6,11 @@
  * Time: 12:43 AM
  */
 
-spl_autoload_register(function ($class) {
-    $file = 'classes/' . $class . '.php';
-    if (file_exists($file)) {
-        include_once($file);
-    } else {
-        trigger_error('Error: Could not load class ' . $class . '!');
-        exit();
-    }
-});
+include 'vendor/autoload.php';
 
-$filters = apiHelper::getFilters();
-$offers = apiHelper::getOffers($filters);
-//print_r($offers);die;
+$helper = new ApiHelper();
+$filters = $helper->getFilters($_GET);
+$offers = $helper->getOffers($filters);
 
 include('views/main.php');
 ?>

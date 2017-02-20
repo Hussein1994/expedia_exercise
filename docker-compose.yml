@@ -8,7 +8,7 @@ services:
       - .:/var/www/expedia
 
   apache:
-    build: containers/php
+    image: php:5.6-apache
     restart: always
     container_name: expedia.apache
     working_dir: /var/www/expedia

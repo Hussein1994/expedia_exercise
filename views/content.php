@@ -6,7 +6,7 @@
 <!-- */-->
 <div class="main">
     <div class="container">
-        <?php if(!is_null($offers)) { ?>
+        <?php if(!empty($offers)) { ?>
             <div id="products" class="row list-group">
                 <?php foreach ($offers as $offer) { ?>
                     <div class="item  col-xs-4 col-lg-4 list-group-item">
